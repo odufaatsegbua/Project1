@@ -1,20 +1,26 @@
 body {
     background-color: black;
     font-family: 'Staatliches', cursive;
- }
- .navbar {
+
+}
+
+.navbar {
     border-top: 4px solid rgb(167, 168, 169);
- }
- #parent-btn{
+}
+
+#parent-btn{
     text-align: center;
     padding: 20px;
- }
- .dropdown {
-    border-radius:50%;
+}
+
+.dropdown {
+    border-radius:50%; 
     display:inline-block;
     margin:0 15px;
- }
- .mainHeader {
+}
+
+.mainHeader {
+
     /* background-color: black; */
     padding: 50px;
  }
