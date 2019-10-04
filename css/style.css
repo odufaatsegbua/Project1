@@ -1,7 +1,39 @@
-.dropdown {
-    display: inline-block;
+body {
+    background-color: black;
+    font-family: 'Staatliches', cursive;
+}
+
+.navbar {
+    border-top: 4px solid rgb(208, 211, 212);
+}
+
+#parent-btn{
+    text-align: center;
+    padding: 20px;
 }
 
 .dropdown {
+    border-radius:50%; 
+    display:inline-block;
+    margin:0 15px;
+}
+
+.mainHeader {
+    /* background-color: black; */
+    padding: 50px;
+}
+
+#heading {
     text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Monoton', cursive;
+
+}
+
+#subhead {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    font-family: 'Staatliches', cursive;
 }
