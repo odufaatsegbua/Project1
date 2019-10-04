@@ -1,10 +1,13 @@
 .dropdown {
     display: inline-block;
+<<<<<<< HEAD
 
 }
 
 body {
     background-color: black;
+=======
+>>>>>>> e78652d055330f7505d6ad840ee4f04155d9e732
 }
 
 .mainHeader {
@@ -13,6 +16,7 @@ body {
 }
 
 #heading {
+<<<<<<< HEAD
     font-family: 'Monoton', cursive;
     font-size: 50px;
     color: white;
@@ -24,4 +28,18 @@ body {
     font-size: 38px;
     color: white;
     text-align: center;
+=======
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Monoton', cursive;
+
+}
+
+#subhead {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    font-family: 'Staatliches', cursive;
+>>>>>>> e78652d055330f7505d6ad840ee4f04155d9e732
 }
