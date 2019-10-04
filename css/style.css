@@ -1,6 +1,7 @@
 body {
     background-color: black;
     font-family: 'Staatliches', cursive;
+
 }
 
 .navbar {
@@ -31,21 +32,19 @@ a:hover {
 }
 
 .mainHeader {
+
     /* background-color: black; */
     padding: 50px;
-}
-
-#heading {
+ }
+ #heading {
     text-align: center;
     color: white;
     font-size: 50px;
     font-family: 'Monoton', cursive;
-
-}
-
-#subhead {
+ }
+ #subhead {
     text-align: center;
     color: white;
     font-size: 38px;
     font-family: 'Staatliches', cursive;
-}
+ }
