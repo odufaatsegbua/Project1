@@ -9,7 +9,7 @@ body {
     overflow: hidden;
 }
 
-a:hover {
+.nav-link:hover {
     background-color: rgb(167, 168, 169);
     border-radius: 50%;
     box-shadow:
@@ -35,19 +35,21 @@ a:hover {
 
     /* background-color: black; */
     padding: 20px;
- }
- #heading {
+}
+
+#heading {
     text-align: center;
     color: white;
     font-size: 60px;
     font-family: 'Monoton', cursive;
- }
- #subhead {
+}
+
+#subhead {
     text-align: center;
     color: white;
     font-size: 38px;
     font-family: 'Staatliches', cursive;
- }
+}
 
 .rowText {
     display: inline-block;
@@ -66,5 +68,3 @@ a:hover {
 .container {
     padding: 50px;
 }
-
-
