@@ -44,8 +44,8 @@
 
             <!-- Search form here -->
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Find New Vibes Here</button>
+                <input id="search-bar" class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button id="search-bar-value" class="btn btn-secondary my-2 my-sm-0" type="submit">Find New Vibes Here</button>
             </form>
         </div>
     </nav>
@@ -142,17 +142,17 @@
                 <div class="card" style="width: 16rem;">
                     <img id="artist-picture-1" class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Artist Name</h5>
+                        <h5 id="artist-name-1" class="card-title">Artist Name</h5>
                         <p class="card-text">Concert date and location</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
             <div class="col-3">
-                <div id="artist-picture-2" class="card" style="width: 16rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
+                <div class="card" style="width: 16rem;">
+                    <img id="artist-picture-2" class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Artist Name</h5>
+                        <h5 id="artist-name-2"class="card-title">Artist Name</h5>
                         <p class="card-text">Concert date and location</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -162,17 +162,17 @@
                 <div class="card" style="width: 16rem;">
                     <img id="artist-picture-3" class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Artist Name</h5>
+                        <h5 id="artist-name-3" class="card-title">Artist Name</h5>
                         <p class="card-text">Concert date and location</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
             <div class="col-3">
-                <div id="artist-picture-4" class="card" style="width: 16rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
+                <div class="card" style="width: 16rem;">
+                    <img id="artist-picture-4" class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Artist Name</h5>
+                        <h5 id="artist-name-4" class="card-title">Artist Name</h5>
                         <p class="card-text">Concert date and location</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -182,20 +182,18 @@
     </div>
 
     <!-- jQuery for Carosel -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-
-       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-   </script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript\app.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
    </script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
    </script>
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
 
 </body>
 
