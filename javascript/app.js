@@ -49,7 +49,7 @@
 // });
 $( document ).ready(function() {
 $.ajax({url:"https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists", 
-        method:"GET"}).then(function(response){console.log(response)
+        method:"GET"}).then(function(response){
     $("#artist-picture-1").attr('src', response.data[0].picture_medium);
     $("#artist-name-1").text(response.data[0].name);
     $("#artist-picture-2").attr('src', response.data[1].picture_medium);
@@ -59,18 +59,19 @@ $.ajax({url:"https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/
     $("#artist-picture-4").attr('src', response.data[3].picture_medium);
     $("#artist-name-4").text(response.data[3].name);
         });
+
+var search;
+
 $("#search-bar-value").on("click", function (event) {
     event.preventDefault();
+    search = $("#search-bar").val();
     window.location.href = "concertResults.html";
-    var search = $("#search-bar").val();
+    console.log(search);
     var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https:eezerdevs-deezer.p.rapidapi.com/search?q=" + search,
+        "url": "https://cors-anywhere.herokuapp.com/https://api.predicthq.com/v1/events/q=" + search,
         "method": "GET",
         "headers": {
-            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-            "x-rapidapi-key": "57c25f866amsh37d2ab4fcf08c12p19d472jsn92819fcff2cb"
+            "Authorization": "Bearer o8Kwb9e4NNS0POa-jUBGUkE13Lv56dce6oSRHIOS"
         }
     }
     $.ajax(settings).done(function (response) {
@@ -78,5 +79,6 @@ $("#search-bar-value").on("click", function (event) {
     });
 });
 });
+
 
 
