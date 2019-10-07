@@ -38,7 +38,11 @@
    </nav>
    <div class="container">
        <div class="card mb-4">
-           <div class="card-header">Search Results</div>
+           <div class="card-header">
+                <div class="form-inline">
+                        <input id="concert-search-bar" class="form-control mr-sm-2" type="text" placeholder="Artist Name">
+                        <button id="concert-search-bar-value" class="btn btn-secondary my-2 my-sm-0" type="submit">Find Concerts</button>
+           </div>
            <div class="card-body">
                <table class="table table-sm table-hover" id='search-table'>
                    <thead>
