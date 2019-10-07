@@ -4,12 +4,19 @@ body {
 
 }
 
+h1 {
+    color: white;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .navbar {
     border-top: 4px solid rgb(167, 168, 169);
     overflow: hidden;
 }
 
-a:hover {
+.nav-link:hover {
     background-color: rgb(167, 168, 169);
     border-radius: 50%;
     box-shadow:
@@ -67,4 +74,6 @@ a:hover {
     padding: 50px;
 }
 
-
+.card {
+    background-color: rgb(167, 168, 169);
+}
