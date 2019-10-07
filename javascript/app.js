@@ -61,6 +61,7 @@ $.ajax({url:"https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/
         });
 $("#search-bar-value").on("click", function (event) {
     event.preventDefault();
+    window.location.href = "searchResults.html";
     var search = $("#search-bar").val();
     var settings = {
         "async": true,
