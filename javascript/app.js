@@ -81,4 +81,13 @@ $("#search-bar-value").on("click", function (event) {
 });
 
 
-
+var settings = {
+    "url": "https://cors-anywhere.herokuapp.com/https://api.predicthq.com/v1/events/?q=post%20malone",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer o8Kwb9e4NNS0POa-jUBGUkE13Lv56dce6oSRHIOS"
+    }
+}
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
