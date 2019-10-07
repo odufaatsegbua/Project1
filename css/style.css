@@ -8,6 +8,7 @@ h1 {
     color: white;
     font-family: 'Monoton', cursive;
     text-align: center;
+
     margin-bottom: 20px;
 }
 
@@ -76,4 +77,11 @@ h1 {
 
 .card {
     background-color: rgb(167, 168, 169);
+}
+    margin-top: 20px;
+    background-color: rgb(167, 168, 169);
+}
+
+a {
+    color: white;
 }
