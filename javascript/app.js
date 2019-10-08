@@ -77,4 +77,18 @@ $("#search-bar-value").on("click", function (event) {
         console.log(response);
     });
 });
+
+
+
+var images = $(".carousel-item img")
+
+$(images[0]).attr("src", "../Project1/images/post malone.jpeg");
+for (let i = 0; i < images.length; i++) {
+
+   var currentItem =  $(".carousel-item img")[i];
+    var ratio = currentItem.clientWidth/currentItem.clientHeight;
+    var height = 500;
+    var width = height * ratio;
+    $(currentItem).attr("style", `height:${height}px ; width${width}px ;` )
+}
 });
