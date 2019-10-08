@@ -4,12 +4,21 @@ body {
 
 }
 
-h1 {
+
+#topArtist {
     color: white;
     font-family: 'Monoton', cursive;
     text-align: center;
+    font-size: 40px;
+}
 
-    margin-bottom: 20px;
+#deezer {
+    color: #2EFE2E;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 25px;
+    padding: 10px;
 }
 
 .navbar {
@@ -39,45 +48,57 @@ h1 {
     margin: 0 15px;
 }
 
+
+.w-75{
+margin:0 auto;
+}
 .mainHeader {
 
     /* background-color: black; */
-    padding: 20px;
+    padding: 30px;
  }
  #heading {
     text-align: center;
     color: white;
-    font-size: 60px;
+    font-size: 63px;
     font-family: 'Monoton', cursive;
  }
  #subhead {
     text-align: center;
-    color: white;
-    font-size: 38px;
+    color: #B40431;
+    font-size: 30px;
     font-family: 'Staatliches', cursive;
  }
 
-.rowText {
-    display: inline-block;
+.carouselHeading {
+    font-size: 37px;
+    color: #585858;
+}
+
+.carouselSub {
+    font-size: 30px;
+    color: #585858;
+}
+.webText {
     padding: 40px;
     text-align: center;
     margin: 0 auto;
-    color: white;
+    color: #B40431;
     font-size: 28px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+   
 }
 
-.col-4 {
+.webContent {
     text-align: center;
 }
 
 .container {
-    padding: 50px;
+    padding: 40px;
 }
 
 .card {
     background-color: rgb(167, 168, 169);
-
     margin-top: 20px;
     background-color: rgb(167, 168, 169);
 }
