@@ -1,52 +1,3 @@
-// // https://api.songkick.com/api/3.0/events.json?apikey={your_api_key}
-// // https://api.spotify.com/v1/search?q=sanctuary
-
-// var spotifyClientId = "8f07791019f9423caf915b8b6c00c3b7";
-// var spotifySecreyKey = "64e9950cd61f47b799b0002d864b61d5";
-
-
-// $.ajax({
-//     url: "https://accounts.spotify.com/api/token",
-//     method: "POST"
-// }).done(function (response) {
-//     console.log("access token response: " + response);
-// })
-
-
-// $.ajax({
-//     url: "https://api.spotify.com/v1/search?q=sanctuary",
-//     method: "GET"
-// }).done(function (response) {
-//     console.log("search response: " + response);
-// })
-// var firebaseConfig = {
-//     apiKey: "AIzaSyAou9EbBPi4eOU0V7oAWqJ1gEsaWgqft10",
-//     authDomain: "api-keys-1f80d.firebaseapp.com",
-//     databaseURL: "https://api-keys-1f80d.firebaseio.com",
-//     projectId: "api-keys-1f80d",
-//     storageBucket: "",
-//     messagingSenderId: "803840728508",
-//     appId: "1:803840728508:web:4164b4960a51dd14681fb9",
-//     measurementId: "G-T5L4502HKC"
-// };
-// firebase.initializeApp(firebaseConfig);
-// var database = firebase.database();
-// database.ref().once("value", function (snapshot) {
-//     var data = snapshot.child("objects").child("data").val();
-//     console.log(data);
-//     $("#artist-picture-1").attr('src', data[0].picture_medium);
-//     $("#artist-name-1").text(data[0].name);
-//     $("#artist-picture-2").attr('src', data[1].picture_medium);
-//     $("#artist-name-2").text(data[1].name);
-//     $("#artist-picture-3").attr('src', data[2].picture_medium);
-//     $("#artist-name-3").text(data[2].name);
-//     $("#artist-picture-4").attr('src', data[3].picture_medium);
-//     $("#artist-name-4").text(data[3].name);
-
-
-
-
-// });
 $( document ).ready(function() {
 $.ajax({url:"https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists", 
         method:"GET"}).then(function(response){console.log(response)
@@ -61,7 +12,6 @@ $.ajax({url:"https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/
         });
 $("#search-bar-value").on("click", function (event) {
     event.preventDefault();
-    window.location.href = "searchResults.html";
     var search = $("#search-bar").val();
     var settings = {
         "async": true,
@@ -78,3 +28,56 @@ $("#search-bar-value").on("click", function (event) {
     });
 });
 });
+
+$("#upcoming-shows-button").on("click", function (event) {
+    event.preventDefault();
+    location.href = "concertResults.html";
+})
+
+$("#concert-search-button").on("click", function (event) {
+    var search = document.getElementById("concert-search-bar").value;
+
+    var spaces = search.split(" ").length - 1;
+    for (i = 0; i < spaces; i++) {
+        search = search.replace(" ", "%20");
+    }
+
+    console.log(search);
+
+    var settings = {
+        "url": "https://cors-anywhere.herokuapp.com/https://api.predicthq.com/v1/events/?q=" + search,
+        "method": "GET",
+        "headers": {
+            "Authorization": "Bearer o8Kwb9e4NNS0POa-jUBGUkE13Lv56dce6oSRHIOS"
+        }
+    }
+
+    $.ajax(settings).done(function (response) {
+
+        document.getElementById("table-container").innerHTML = "";
+
+
+
+        for (i = 0; i < response.results.length; i++) {
+            var tr = $("<tr></tr>");
+            var title = response.results[i].title;
+            var date = response.results[i].start;
+            var location = response.results[i].location;
+
+            date = date.split("T")[0];
+            date = date.replace("-", "/");
+            date = date.replace("-", "/");
+            date = moment(date, "YYYY/MM/DD").format("MM/DD/YYYY");
+
+            var thTitle = $("<th scope='col'>" + title + "</th>");
+            var thDate = $("<th>" + date + "</th>");
+            var thLocation = $("<th>" + location + "</th>");
+
+            tr.append(thTitle);
+            tr.append(thLocation);
+            tr.append(thDate);
+
+            $("#table-container").append(tr);
+        }
+    });
+})
