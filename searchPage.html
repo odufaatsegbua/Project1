@@ -28,7 +28,7 @@
                 <!-- Insert Concert API Here -->
                 <li class="nav-item">
                     <!-- Insert Concert API call here -->
-                    <a class="nav-link" href="#">Upcoming Shows</a>
+                    <a class="nav-link" href="concertResults.html">Upcoming Shows</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -37,8 +37,8 @@
 
             <!-- Search form here -->
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" id="submitButton" type="submit"><a href="searchPage.html">Find New Vibes Here</a></button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search-bar">
+                <button class="btn btn-secondary my-2 my-sm-0" id="submitButton" type="submit">Find New Vibes Here</button>
             </form>
         </div>
     </nav>
@@ -50,9 +50,10 @@
                 <table class="table table-sm table-hover" id='search-table'>
                     <thead>
                         <tr>
-                            <th scope="col">Artist Picture</th>
+                            <th scope="col">Album Picture</th>
                             <th scope="col">Artist Name</th>
-                            <th scope="col">Search Results</th>
+                            <th scope="col">Song Name</th>
+                            <th scope="col">Preview</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,7 +77,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src='javascript\app.js'></script>
+<script type="text/javascript" src='javascript/search.js'></script>
 </body>
 
 </html>

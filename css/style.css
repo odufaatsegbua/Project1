@@ -77,11 +77,14 @@ h1 {
 
 .card {
     background-color: rgb(167, 168, 169);
-}
+
     margin-top: 20px;
     background-color: rgb(167, 168, 169);
 }
 
 a {
     color: white;
+}
+.card-body{
+    background-color: white;
 }
