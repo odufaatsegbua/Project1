@@ -26,7 +26,7 @@ $("#submitButton").on("click", function (event) {
 
 var images = $(".carousel-item img")
 
-$(images[0]).attr("src", "../Project1/images/post malone.jpeg");
+$(images[0]).attr("src", "images\post_malone.jpeg");
 for (let i = 0; i < images.length; i++) {
 
    var currentItem =  $(".carousel-item img")[i];
